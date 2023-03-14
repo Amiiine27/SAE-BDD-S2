@@ -64,7 +64,7 @@ plt.hist(valeurs1, bins=inter1, rwidth=0.8)  # Création de l'histogramme 1
 plt.xlabel('Valeurs ')
 plt.xticks(np.arange(-3, 4))
 plt.ylabel('Nombres')
-plt.title("Histogramme valeurs 1")
+plt.title("VAL 1 : " + "Moy : " + str(moyenne(valeurs1)) + " σ : " + str(ecartType(valeurs1)))
 plt.show()
 
 
@@ -74,7 +74,7 @@ plt.hist(valeurs2, bins=inter2, rwidth=0.8)  # Création de l'histogramme 2
 plt.xlabel('Valeurs ')
 plt.xticks(np.arange(-3, 4))
 plt.ylabel('Nombres')
-plt.title("Histogramme valeurs 2")
+plt.title("VAL 2 : " + "Moy = " + str(moyenne(valeurs2)) + " σ = " + str(ecartType(valeurs2)))
 plt.show()
 
 
@@ -84,7 +84,7 @@ plt.hist(valeurs3, bins=inter3, rwidth=0.8)  # Création de l'histogramme 3
 plt.xlabel('Valeurs ')
 plt.xticks(np.arange(-2, 13))
 plt.ylabel('Nombres')
-plt.title("Histogramme valeurs 3")
+plt.title("VAL 3 : " + "Moy = " + str(moyenne(valeurs3)) + " σ = " + str(ecartType(valeurs3)))
 plt.show()
 
 
@@ -94,7 +94,7 @@ plt.hist(valeurs4, bins=inter4, rwidth=0.8)  # Création de l'histogramme 4
 plt.xlabel('Valeurs ')
 plt.xticks(np.arange(-3, 4))
 plt.ylabel('Nombres')
-plt.title("Histogramme valeurs 4")
+plt.title("VAL 4 : " + "Moy = " + str(moyenne(valeurs4)) + " σ = " + str(ecartType(valeurs4)))
 plt.show()
 
 # -----------------------------------------------------------------------------------------------------------------
