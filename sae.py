@@ -150,3 +150,40 @@ print("L'écart-type est égal à " + str(ecartType(valeurs4)))
 print(" ")
 print(" ")
 
+
+# Nuages de points :
+
+""" Nuage avec VALEUR 1 & VALEUR 2 """
+plt.scatter(valeurs1, valeurs2)
+plt.title("Nuage de points comparant valeurs1 & valeurs2")
+plt.xlabel("Valeurs 1")
+plt.ylabel("Valeurs 2")
+plt.savefig("NuageDePoints-1.png")
+plt.show()
+
+
+""" Nuage avec VALEUR 1 & VALEUR 3 """
+plt.scatter(valeurs1, valeurs3)
+plt.title("Nuage de points comparant valeurs1 & valeurs2")
+plt.xlabel("Valeurs 1")
+plt.ylabel("Valeurs 3")
+plt.savefig("NuageDePoints-2.png")
+plt.show()
+
+
+""" Nuage avec VALEUR 2 & VALEUR 3 """
+plt.scatter(valeurs2, valeurs3)
+plt.title("Nuage de points comparant valeurs1 & valeurs2")
+plt.xlabel("Valeurs 2")
+plt.ylabel("Valeurs 3")
+plt.savefig("NuageDePoints-3.png")
+plt.show()
+
+
+""" Nuage avec VALEUR 2 & VALEUR 4 """
+plt.scatter(valeurs2, valeurs4)
+plt.title("Nuage de points comparant valeurs1 & valeurs2")
+plt.xlabel("Valeurs 2")
+plt.ylabel("Valeurs 4")
+plt.savefig("NuageDePoints-4.png")
+plt.show()
