@@ -46,12 +46,34 @@ CREATE TABLE crypto.miningPool
     crypto INT REFERENCES crypto.cryptos (idCrypto)
 );
 
-CREATE TABLE crypto.transaction
-(
-    idTransaction SERIAL PRIMARY KEY,
-    dateTransaction DATE REFERENCES crypto.miningPool(dateMinage),
-    montant DECIMAL
+CREATE TABLE crypto.transaction(
+	idTransaction SERIAL PRIMARY KEY,
+	date DATE,
+	descriptionTransaction VARCHAR(100)
 );
+
+CREATE TABLE ?.recette(
+	idRecette SERIAL PRIMARY KEY,
+	idTransaction SERIAL,
+	montantRecette INT
+) INHERITS transaction;
+
+CREATE TABLE ?.depense(
+	idDepense SERIAL,
+	idTransaction INT,
+	montantDepense INT
+)INHERITS transaction;
+
+CREATE TABLE ?.posteDeDepense(
+	idPosteDeDepense SERIAL PRIMARY KEY,
+	descriptionPosteDeDepense VARCHAR(64)
+);
+
+CREATE TABLE ?.posteDeBenefice(
+	idPosteDeDepense SERIAL PRIMARY KEY,
+	descriptionPosteDeDepense VARCHAR(64)
+);
+
 
 
 
