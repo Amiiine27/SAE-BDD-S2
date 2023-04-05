@@ -75,6 +75,8 @@ CREATE TABLE ?.posteDeBenefice(
 );
 
 
+CREATE TABLE ?.bilan(
+	
 
 
 
