@@ -45,9 +45,7 @@ CREATE TABLE shopInfo.posteDeDepense
 
 CREATE TABLE shopInfo.periode
 (
-    annee INT,
-    mois INT,
-    PRIMARY KEY (annee, mois)
+    periode date PRIMARY KEY
 );
 
 CREATE TABLE shopInfo.depenses
