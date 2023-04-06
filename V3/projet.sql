@@ -2,11 +2,6 @@ DROP SCHEMA IF EXISTS shopInfo CASCADE;
 CREATE SCHEMA shopInfo;
 
 
-CREATE TABLE shopInfo.boutique
-(
-    idBoutique SERIAL PRIMARY KEY,
-    adresse VARCHAR
-);
 
 CREATE TABLE shopInfo.produit
 (
@@ -29,45 +24,40 @@ CREATE TABLE shopInfo.stocks
 );
 
 
-
-CREATE TABLE shopInfo.valeurs
-(   
-    idVal SERIAL,
-    valeur DECIMAL,
-    PRIMARY KEY (idVal, valeur)
-);
-
-CREATE TABLE shopInfo.posteDeDepense
-(
-    idPoste SERIAL PRIMARY KEY,
-    intitule VARCHAR
-);
-
 CREATE TABLE shopInfo.periode
 (
-    periode date PRIMARY KEY
+    idPeriode INT PRIMARY KEY,
+    mensualite date
 );
+
 
 CREATE TABLE shopInfo.depenses
 (
-    idDepense SERIAL PRIMARY KEY,
+    idDepense SERIAL,
     montant DECIMAL,
-    posteDeDepense INT REFERENCES shopInfo.posteDeDepense(idPoste)
+    nomPosteDeDepense VARCHAR(50)
 
 ) INHERITS (shopInfo.periode);
 
+
 CREATE TABLE shopInfo.recettes
 (
-    idRecette SERIAL PRIMARY KEY,
+    idRecette SERIAL,
     montant DECIMAL
 
 ) INHERITS (shopInfo.periode);
 
 
+CREATE TABLE shopInfo.bilan(
+	montantDuBilan DECIMAL
+
+) INHERITS (shopInfo.periode);
 
 
-
-
-
-
-
+-- On stock nos 100 valeurs dans cette table et elle ne fait donc pas partie des tables que l'on utilise dans l'intitulé de la sae
+CREATE TABLE shopInfo.valeurs
+(   
+    idVal SERIAL PRIMARY KEY,
+    valeur DECIMAL,
+    
+);
